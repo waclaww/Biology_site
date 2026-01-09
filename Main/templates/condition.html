@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title%}{{title}}{% endblock %}
+
+{% block container %}
+{% autoescape off %}
+<div class="text">
+    <h1 class="article_title">{{task.title}}</h1>
+    <p>
+      {% autoescape off %}
+      {{task.condition}}
+      {% endautoescape %}
+    </p>
+  </div>
+{% endautoescape %}
+{% endblock %}

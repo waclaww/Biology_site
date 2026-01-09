@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block container %}
+  {% for article in articles %}
+    <a href="{{article.get_absolute_url}}" class="stagesButtons">
+      <div class="stages">
+      {{ article.title }}
+      </div>
+    </a>
+  {% endfor %}
+{% endblock %}

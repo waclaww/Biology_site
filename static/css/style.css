@@ -1,0 +1,493 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    }
+header {
+    background-color: #29772c;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    z-index: 1;
+}
+
+header a {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    text-align: center;
+}
+
+header div {
+    width: 60px;
+    height: 60px;
+    background-color: #393838;
+    z-index: 1;
+    border-radius: 30px;
+    border: 1px solid #000000;
+}
+header img {
+    width: 60px;
+}
+
+header p {
+    text-decoration: none;
+    color: #fff;
+    position: fixed;
+    top: 60px;
+}
+
+header h1{
+    text-align: center;
+}
+
+nav {
+    background-color: #1b1a1a;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    top: 0;
+    z-index: 1;
+}
+nav a {
+    color: white;
+    padding: 13px 20px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s;
+    border-radius: 10px;
+}
+nav a:hover {
+    background-color: #3d5b3d;
+    cursor: default;
+    border-radius: 10px;
+}
+
+.back {
+    position: fixed;
+    top: 140px;
+    left: 0;
+    text-decoration: none;
+    background-color: #1b1a1a;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    max-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 40px 0;
+    transition: background-color 0.2s;
+}
+
+.back:hover {
+    background-color: #3d5b3d;
+    cursor: default;
+}
+
+.stages{
+    padding: 20px;
+    max-width: 1000px;
+    margin-top: 10px;
+    background-color: rgb(235, 235, 235);
+    display: block;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: larger;
+    transition: background-color 0.2s;
+}
+
+.stagesButtons {
+    text-decoration: none;
+    color: #000;
+    display: block;
+   
+    
+}
+
+.stagesButtons :hover {
+    background-color: #a3d09e;
+    cursor: default;
+}
+.container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 165px;
+    opacity: 0.9;
+    position: relative;
+}
+
+.text {
+    padding: 20px;
+    max-width: 100%;
+    min-width: 1000px;
+    position: relative;
+    background-color: #f1f1f1;
+    top: 0px;
+    border-radius: 50px;
+}
+.banner {
+    position: fixed;
+    top: 180px;
+    left: 0;
+    z-index: -1;
+}
+
+
+.article_title {
+    text-align: center;
+}
+.section {
+    margin-bottom: 30px;
+}
+.section img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.authentication {
+    position: fixed;
+    top: 60px;
+    z-index: 1;
+    right: 0;
+    text-decoration: none;
+    background-color: #1b1a1a;
+    color: #fff;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px 0 0 0;
+    transition: background-color 0.2s;
+}
+.authentication:hover {
+    cursor: default;
+    background-color: #3d5b3d;
+}
+
+.registration-link a{
+    width: auto;
+    margin: 0.5em 0;
+    padding: 0.5em 1em;
+    font-size: 10pt;
+    text-decoration: none;
+    color: #fff;
+    border: 0;
+    border-radius: 1em;
+    background-color: #3d5b3d;
+    transition: background-color 0.2s;
+}
+
+.registration-link a:hover {
+    background-color: #1b1a1a;
+}
+
+.registration-link{
+    margin: 0 0 0 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Myform{
+    width:470px;
+    /* height: 295px; */
+    background: #5b745f;
+    opacity: 0.9;
+    z-index: -1;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px 0px #000000;
+}
+.Myform h1 {
+    top: 10px;
+    background-color: #1b1a1a; 
+    border-radius: 10px;
+    color: #fff; 
+    font-size: 14px; 
+    padding: 20px; 
+    text-align: center; 
+}
+.inp{
+    display: flex;
+    padding: 15px;
+}
+.login{
+    border: 0px solid #dcdcdc;
+    padding: 12px 10px; 
+    width: 420px; 
+    border-radius: 10px;
+    background-color: #1b1a1a;
+    color: white;
+    position: relative;
+    top: 6px;
+    margin-bottom: 4px;
+}
+
+.login::placeholder{
+    color: rgb(166, 166, 166);
+}
+
+.password{
+    border: 0px solid #dcdcdc;
+    padding: 12px 10px; 
+    width: 420px; 
+    border-radius: 10px;
+    background-color: #1b1a1a;
+    color: white;
+    position: relative;
+    top: 6px;
+    margin-bottom: 4px;
+    align-items: flex-start;
+}
+
+.password::placeholder{
+    color: rgb(166, 166, 166);
+}
+
+form p label{
+    font-weight: 300;
+}
+
+form p .helptext{
+    margin: 0.2em 0;
+    font-size: 8pt;
+    opacity: 0.8;
+}
+
+form ul li{
+    margin: 0 0 0.3em 0;
+    padding: 0;
+    font-size: 8pt;
+    opacity: 0.8;
+}
+
+form ul.errorlist li{
+    margin: 0 0 0.3em 0;
+    padding: 0;
+    font-size: 8pt;
+    color: rgb(110, 28, 28);
+}
+
+.btn{
+    background: #1b1a1a; 
+    border: 0px solid #dcdcdc;
+    border-radius: 20px; 
+    color: #fff; 
+    float: right; 
+    font-weight: bold; 
+    margin: 10px; 
+    padding: 12px 20px; 
+    position: relative;
+    top: 10px;
+    right: 85px;
+    width: 100px;
+}
+
+.Myform .inp form .submit_container{
+    margin: 1em 0 0 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Myform .inp form .submit_container .register_btn{
+    position: relative;
+    width: auto;
+    margin: 0.5em 0;
+    padding: 0.5em 1em;
+    font-size: 14pt;
+    background-color: #1b1a1a;
+    color: white;
+    border: 0;
+    border-radius: 1em;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.Myform .inp form .submit_container .register_btn:hover{
+    background-color: #3d5b3d;
+}
+
+.info{
+    width: 130px; 
+    float: left; 
+    padding-top: 20px;
+}
+
+.video {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border:3px solid#46a85d;
+    background-color: #46a85d;
+    width: 565px;
+    height: 320px;
+    left: 225px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+/* Начало профиля */
+
+.profile {
+    position: relative;
+    width: 500px;
+    height: 300px; 
+    background: #f1f1f1;
+    opacity: 0.9;
+    border-radius: 10px;
+    box-shadow: 4px 4px 6px 0px #000000;
+}
+
+.profile h2 {
+    text-align: center;
+    z-index: 1;
+}
+
+.profile .profile_info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.profile .profile_info .image{
+    width: 30%;
+    height: 100%;
+    margin: 8px;
+    padding: 0 0 0 0;
+}
+
+.profile .profile_info .image img{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.profile .profile_info .profile_info_p{
+    width: 70%;
+    height: 100%;
+    margin: 8px;
+    padding: 0 0 0 0;
+}
+
+.profile .profile_info .profile_info_p h2{
+    margin: 0 0 0.5em 0;
+    padding: 0 0 0 0;
+}
+
+.profile .profile_info .profile_info_p p{
+    margin: 0 0 0.2em 0;
+    padding: 0;
+}
+
+.profile .statistics{
+    position: relative;
+    margin: 0.5em 0.5em;
+    padding: 0.5em;
+    top: 2em;
+    background-color: #1b1a1a;
+    color: white;
+    border: 0;
+    border-radius: 0.375em;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.profile .statistics:hover{
+    background-color: #3d5b3d;
+}
+
+.results {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    width: 500px;
+    height: auto; 
+    text-align: center;
+    justify-content: center;
+    background: #f1f1f1;
+    opacity: 0.9;
+    border-radius: 10px;
+    box-shadow: 4px 4px 6px 0px #000000;
+}
+
+.results a{
+    position: relative;
+    margin: 0.5em 0.5em;
+    padding: 0.5em;
+    top: 2em;
+    background-color: #1b1a1a;
+    color: white;
+    border: 0;
+    border-radius: 0.375em;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.results a:hover {
+    background-color: #3d5b3d;
+}
+
+.pagination {
+    display: flex;
+    padding: 0 0.2em 2em 0.2em;
+}
+
+.test_link{
+    position: relative;
+    background-color: #1b1a1a;
+    color: white;
+    text-decoration: none; 
+    transition: background-color 0.2s;
+}
+
+.test_link div {
+    width: 250px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color:#484848;
+    margin: 0.5em 0.5em;
+    padding: 0.5em;
+    border: 0;
+    border-radius: 0.375em;
+    transition: background-color 0.2s;
+}
+
+.test_link div:hover {
+    background-color:#3d5b3d;
+}
+

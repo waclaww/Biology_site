@@ -1,0 +1,203 @@
+.testContainer{
+    position: static;
+    color: white;
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+    border-radius: 0.375rem;
+    border: 1px solid gray;
+    max-width: 584px;
+}
+
+.testHeader{
+    position: static;
+    width: calc(100% - 40px);
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px 0 20px;
+}
+
+.testQuestionNum{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 0.375rem;
+    border: 1px solid gray;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.rightQuestion{
+    color: white;
+    background-color: #8acc93;
+}
+
+.wrongQuestion{
+    color: white;
+    background-color: #eb8a8a;
+}
+
+.unansweredQuestion{
+    color: white;
+    background-color: #8aaeeb;
+}
+
+.currentQuestion{
+    border: 3px solid black;
+}
+
+.testHint{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background-color: #8aaeeb;
+    border-radius: 0.375rem;
+    border: 1px solid gray;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.testTime{
+    width: 90px;
+    height: 40px;
+    background-color: #d14a4a;
+    color: white;
+    border-radius: 0.375rem;
+    border: 1px solid gray;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.testBody{
+    position: static;
+    width: 100%;
+    height: 50%;
+}
+
+.testImageContainer{
+    position: static;
+    height: 100%;
+}
+
+.testImage{
+    margin: 20px;
+    height: calc(100% - 40px);
+    float: left;
+    border: 1px solid gray;
+    border-radius: 0.375rem;
+}
+
+.testQuestionContainer{
+    padding-top: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0 20px 20px 20px;
+}
+
+.testQuestionContainerWin{
+    padding-top: 20px;
+    font-weight: 600;
+    font-size: 32px;
+    margin: 0 20px 20px 20px;
+    color: #ffffff;
+}
+
+.testQuestionContainerLose{
+    padding-top: 20px;
+    font-weight: 600;
+    font-size: 32px;
+    margin: 0 20px 20px 20px;
+    color: #eb8a8a;
+}
+
+.testAnswersContainer{
+    position: static;
+    height: calc(100% - 50% - 80px);
+    padding-bottom: 20px;
+}
+
+.answerButton{
+    color: black;
+    text-align: left;
+    border: 1px #8aaeeb solid;
+    border-radius: 0.375rem;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 6px 12px;
+    height: auto;
+    margin: 5px 20px;
+    width: calc(100% - 40px);
+    cursor: pointer;
+    white-space: pre-line;
+    transition: 0.2s;
+}
+.answerButton:hover{
+    background-color: #8aaeeb;
+    color: white;
+}
+
+.answerButtonRight{
+    color: black;
+    text-align: left;
+    border: 1px #8acc93 solid;
+    background-color: #8acc93;
+    border-radius: 0.375rem;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 6px 12px;
+    height: auto;
+    margin: 5px 20px;
+    width: calc(100% - 40px);
+    cursor: pointer;
+    white-space: pre-line;
+    transition: 0.2s;
+}
+
+.answerButtonWrong{
+    color: black;
+    text-align: left;
+    border: 1px #eb8a8a solid;
+    background-color: #eb8a8a;
+    border-radius: 0.375rem;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 6px 12px;
+    height: auto;
+    margin: 5px 20px;
+    width: calc(100% - 40px);
+    cursor: pointer;
+    white-space: pre-line;
+    transition: 0.2s;
+}
+
+.answerButtonPicked{
+    border: 4px dotted black;
+}
+
+.button{
+    color: #8aaeeb;
+    border: 1px #8aaeeb solid;
+    border-radius: 0.375rem;
+    font-size: 16px;
+    padding: 6px 12px;
+    margin: 0.75rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.button:hover{
+    background-color: #8aaeeb;
+    color: white;
+}
+
+@media all and (max-width : 750px) {
+    .testImage{
+        margin: 20px;
+        width: calc(100% - 40px);
+        float: left;
+        border: 1px solid gray;
+        border-radius: 0.375rem;
+    }
+}

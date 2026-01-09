@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block container %}
+<div class="card">
+    <div class="card-body">
+        <br><h1 class="testTitle" style="color: white;">{{ test.title }}</h1><br>
+        <div class="testContainer">
+            <div class="testHeader">
+                <div class="testQuestionsNums">
+                    <input type="button" class="testQuestionNum" value="1">
+                    <input type="button" class="testQuestionNum" value="2">
+                    <input type="button" class="testQuestionNum" value="3">
+                    <input type="button" class="testQuestionNum" value="4">
+                    <input type="button" class="testQuestionNum" value="5">
+                    <input type="button" class="testQuestionNum" value="6">
+                    <input type="button" class="testQuestionNum" value="7">
+                    <input type="button" class="testQuestionNum" value="8">
+                    <input type="button" class="testQuestionNum" value="9">
+                    <input type="button" class="testQuestionNum" value="10">
+                </div>
+                <div class="testTimeAndHint">
+                    <input type="button" class="testTime" value="15:00">
+                </div>
+            </div>
+            <div class="testBody">
+                <div class="testImageContainer">
+                    <!-- <a href="#"><img src="{% static 'images/background.jpg' %}" alt="testImage" class="testImage"></a> -->
+                    <div class="testQuestionContainer">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, fugiat dolore harum id cum tempora. Molestiae laborum doloremque rem qui voluptates, itaque fugit repellat magni nemo culpa atque expedita aperiam.</div>
+                </div>
+            </div>
+            <div class="testAnswersContainer">
+                    <input type="button" id="answerButton" class="answerButton" value="1. lorem ipsum">
+                    <input type="button" id="answerButton" class="answerButton" value="2. lorem ipsum">
+                    <input type="button" id="answerButton" class="answerButton" value="3. lorem ipsum">
+                    <input type="button" id="answerButton" class="answerButton" value="4. lorem ipsum">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="modal fade" id="statisticsModal" tabindex="-1" role="dialog" aria-labelledby="statisticsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="statisticsModalLabel">Статистика</h5>
+            </div>
+            <div class="modal-body" id="statModalBody">
+                    <div class="card">
+                        <div class="card-header bg-success">
+                            Вопрос №1
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">I only want __ little sugar in my tea, please.</h5>
+                            <p class="card-text">Правильный ответ: <div class="btn btn-success">a</div></p>
+                            <p class="card-text">Ваш ответ: <div class="btn btn-success">a</div></p>
+                        </div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<p id="getUserName" style="display: none;">{{request.user.is_authenticated}}</p>
+<p id="testId" style="display: none;">{{test.id}}</p>
+<p id="csrf" style="display: none;">{{ csrf_token }}</p>
+<p class="rightArray" style="display: none;">{% for item in items %}{{item.pk}}#{{item.title}}#{% if item.photo %}{{item.photo.url}}{% else %}none{% endif %}#{% if item.answer1 %}{{item.answer1}}{% else %}none{% endif %}#{% if item.answer2 %}{{item.answer2}}{% else %}none{% endif %}#{% if item.answer3 %}{{item.answer3}}{% else %}none{% endif %}#{% if item.answer4 %}{{item.answer4}}{% else %}none{% endif %}#{{item.right_answer}}#{{item.hint}}#{% if item.rules.all %}{% autoescape off %}{% for rule in item.rules.all %}{{rule.content}}<br><br><a class="button" href="{{rule.get_absolute_url}}" target="_blank">Открыть пункт</a><br><br>{% endfor %}{% endautoescape %}{% else %}Вопрос не имеет ссылок на пункты ПДД{% endif %}|{% endfor %}</p>
+{% endblock %}
+
+{% block import %}
+<link rel="stylesheet" href="{% static 'css/newtest.css' %}">
+<script src="{% static 'js/test.js' %}"></script>
+
+{% endblock %}

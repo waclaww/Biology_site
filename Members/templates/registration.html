@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block container %}
+
+
+<div class="Myform">
+    <h1>Регистрация на сайте</h1>
+    <div class="inp">
+        <!-- <form action="{% url 'registration' %}" method="POST">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Логин" class="login">
+            
+            <input type="password" name="password" placeholder="Придумайте пароль" class="password">
+
+            <input type="password" name="password2" placeholder="Повторите пароль" class="password">
+            
+            <input type="submit" value="Зарегистрироваться!" class="btn">
+        </form> -->
+        <form action="{% url 'registration' %}" method="POST">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <div>
+                <input type="checkbox" id="passwordInputCheckbox">
+                <label for="passwordInputCheckbox">Показать пароль</label>
+            </div>
+            <div class="submit_container">
+                <input type="submit" value="Зарегистрироваться" class="register_btn">
+            </div>
+        </form>
+    </div>
+    <div class="registration-link">
+        <a href="{% url 'login' %}">Уже есть аккаунт? <u>Войдите!</u></a>
+    </div>
+</div>
+{% endblock %}
+
+{% block import %}
+<script src="{% static 'js/show_password.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Наследственность и изменчивость организмов{% endblock %}</title>
+  <link rel="shortcut icon" href="{% static 'images/icon.png' %}" type="image/x-icon">
+  <link rel="stylesheet" href="{% static 'css/style.css'%}">
+  
+</head>
+<body>
+
+    <header>
+    <h1>Наследственность и изменчивость организмов</h1>
+    {% if user.is_authenticated %}
+    <a href="{% url 'profile' username=user.username %}">
+        <div>
+            <img src="{% if user.is_staff %}{% static 'images/teacher.png'%}{% else %}{% static 'images/student.png'%}{% endif %}">
+        </div>
+        <p>{{ user.username }}</p>
+    </a>
+    {% endif %}
+    </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Положения</a>
+        <a href="{% url 'tasks' %}">Задачи</a>
+        <a href="{% url 'contacts' %}">Контакты</a>
+        <a href="{% url 'about' %}">О сайте</a>
+        
+        {% if user.is_staff %}
+        <a href="/admin">Админ</a>
+        {% endif %}
+        
+    </nav>
+    <a onclick="javascript:history.back(); return false;">
+        <div class="back">Назад</div>
+    </a>
+    {% if user.is_authenticated %}
+    <a href="{% url 'logout' %}" class="authentication">Выйти</a>
+    {% else %}    
+    <a href="{% url 'login' %}" class="authentication">Войти</a>    
+    {% endif %}
+    
+
+    <div class="container">
+    {% block container %}
+        no data
+    {% endblock %}
+    </div>
+
+{% if messages %}
+    <div class="alertMain" id="alertMain">
+        <div class="alertCloseButton"><img id="alertCloseButton" src="{% static 'images/close.png' %}" width="16px"></div>
+        <div class="alertBody" id="alertBody">
+            {% for message in messages %}
+            <p class="alertBodyP">
+                {{message}}
+            </p>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="{% static 'js/alert.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/alert.css'%}">
+{% endif %}
+
+{% block import %}
+{% endblock %}
+</body>
+</html>

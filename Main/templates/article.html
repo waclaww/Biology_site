@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%}{{title}}{% endblock %}
+
+{% block container %}
+  <!-- <header class="banner">
+    <img src="{% static 'images/shape.png' %}" class="banner-image">
+  </header> -->
+  <div class="text">
+    <h1 class="article_title">{{article.title}}</h1>
+    <p>
+      {% autoescape off %}
+      {{article.content|safe}}
+      {% endautoescape %}
+    </p>
+    {% if article.test %}
+    <a href="{{ article.test.get_absolute_url }}" class="test_link"><div>Пройдите тест по данной теме</div></a>
+    {% endif %}
+  </div>
+{% endblock %}

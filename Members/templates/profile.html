@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block container %}
+<div class="profile">
+    <h2 style="padding-top: 0.5em;">Профиль</h2>
+    <div class="profile_info">
+        <div class="image">
+            <img src="{% if profile.is_staff %}{% static 'images/teacher.png' %}{% else %}{% static 'images/student.png' %}{% endif %}">
+        </div>
+        <div class="profile_info_p">
+            <h2>{{ profile.username }}</h2>
+            {% if profile.is_staff %}<p><b>Статус:</b> преподователь</p>{% else %}<p><b>Статус:</b> студент</p>{% endif %}
+            {% if profile.first_name %}<p><b>Имя:</b> {{ profile.first_name }}</p>{% endif %}
+            {% if profile.last_name %}<p><b>Фамилия:</b> {{ profile.last_name }}</p>{% endif %}
+            {% if profile.email %}<p><b>Почта:</b> {{ profile.email }}</p>{% endif %}
+        </div>
+    </div>
+    {% if has_results %}<a href="{% url 'results' username=profile.username %}" class="statistics">Результаты прохождения тестов</a>{% endif %}
+</div>
+{% endblock %}

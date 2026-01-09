@@ -1,0 +1,5 @@
+.cke_source {
+    background-color: #7e7e7e !important; /* тёмный фон */
+    color: #f1f1f1 !important;           /* светлый текст */
+    font-family: monospace;
+}
